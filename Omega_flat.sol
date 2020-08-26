@@ -862,7 +862,7 @@ pragma solidity ^0.5.0;
 
 
 
-contract OmegaToken is ERC20, ERC20Detailed, ERC20Burnable, ERC20Mintable, ERC20Pausable
+contract Omega is ERC20, ERC20Detailed, ERC20Burnable, ERC20Mintable, ERC20Pausable
 {
     constructor () public ERC20Detailed("Omega", "OMEGA", 2)
     {
