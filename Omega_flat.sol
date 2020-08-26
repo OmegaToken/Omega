@@ -1,3 +1,4 @@
+
 // File: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.5.0/contracts/GSN/Context.sol
 
 pragma solidity ^0.5.0;
@@ -27,7 +28,6 @@ contract Context {
         return msg.data;
     }
 }
-
 
 // File: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.5.0/contracts/token/ERC20/IERC20.sol
 
@@ -107,7 +107,6 @@ interface IERC20 {
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
-
 
 // File: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.5.0/contracts/token/ERC20/ERC20.sol
 
@@ -340,7 +339,6 @@ contract ERC20 is Context, IERC20 {
         _approve(account, _msgSender(), _allowances[account][_msgSender()].sub(amount, "ERC20: burn amount exceeds allowance"));
     }
 }
-
 
 // File: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.5.0/contracts/access/roles/PauserRole.sol
 
@@ -855,8 +853,7 @@ library SafeMath {
     }
 }
 
-
-// File: browser/OmegaToken.sol
+// File: browser/Omega.sol
 
 pragma solidity ^0.5.0;
 
@@ -867,8 +864,8 @@ pragma solidity ^0.5.0;
 
 contract OmegaToken is ERC20, ERC20Detailed, ERC20Burnable, ERC20Mintable, ERC20Pausable
 {
-    constructor () public ERC20Detailed("OmegaToken", "OMT", 0)
+    constructor () public ERC20Detailed("Omega", "OMEGA", 2)
     {
-        _mint(msg.sender, 1000000000 * (10 ** uint256(decimals())));
+        _mint(msg.sender, 100000000000 * (10 ** uint256(decimals())));
     }
 }
