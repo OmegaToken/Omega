@@ -8,8 +8,8 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.5.0/contr
 
 contract OmegaToken is ERC20, ERC20Detailed, ERC20Burnable, ERC20Mintable, ERC20Pausable
 {
-    constructor () public ERC20Detailed("OmegaToken", "OMT", 0)
+    constructor () public ERC20Detailed("Omega", "OMEGA", 2)
     {
-        _mint(msg.sender, 1000000000 * (10 ** uint256(decimals())));
+        _mint(msg.sender, 100000000000 * (10 ** uint256(decimals())));
     }
 }
